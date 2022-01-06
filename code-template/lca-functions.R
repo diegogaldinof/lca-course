@@ -73,19 +73,15 @@ tbl_lca <- function(lca_models = NULL) {
 
 
 # Average posterior probability (AvePP)
-tbl_avepp <- function(lca_models, n_class = NULL) {
+tbl_avepp <- function(lca_model = NULL) {
   
   if (!require(tidyverse)) {install.packages("tidyverse")}; require(tidyverse)
   if (!require(gtsummary)) {install.packages("gtsummary")}; require(gtsummary)
   if (!require(huxtable)) {install.packages("huxtable")}; require(huxtable)
   
-  if (is.null(n_class)) {stop("Please, enter the number of classes of the model\n you want to create the AvePP table")}
-  
-  model <- lca_models[[n_class]]
-  
   avepp_table <- round(aggregate(
-    x = model$posterior,
-    by = list(model$predclass),
+    x = lca_model$posterior,
+    by = list(lca_model$predclass),
     FUN = "mean"), digits = 2) %>%
     data.frame()
   colnames(avepp_table) <- c("Class", 1:nrow(avepp_table))
@@ -174,8 +170,6 @@ profile_plot <- function(lca_model,
                          binary = TRUE) {
   
   if (!require(tidyverse)) {install.packages("tidyverse")}; require(tidyverse)
-  if (!require(viridis)) {install.packages("tidyverse")}; require(viridis)
-  
   
   probs <- lca_model$probs
   
@@ -186,6 +180,13 @@ profile_plot <- function(lca_model,
   if (is.null(class_names)) {
     class_names <- paste("Class",
                          1:length(unique(lca_model$predclass)))
+    class_names <- paste0(class_names, " (",
+                         gtsummary::style_percent(lca_model$P, symbol = TRUE),
+                         ")")
+  } else {
+    class_names <- paste0(class_names, " (",
+                          gtsummary::style_percent(lca_model$P, symbol = TRUE),
+                          ")")
   }
   
   if (binary) {
@@ -213,6 +214,7 @@ profile_plot <- function(lca_model,
       scale_color_viridis_d(name = "",
                             option = "D",
                             end = 0.8) +
+      guides(color = guide_legend(nrow = 2)) + 
       theme_minimal() +
       theme(panel.grid.minor = element_blank(),
             panel.grid.major.x = element_blank(),
@@ -259,6 +261,7 @@ profile_plot <- function(lca_model,
       scale_x_discrete(name = "Indicators") +
       scale_fill_viridis_d(name = "",
                            option = "D") +
+      guides(fill = guide_legend(nrow = 2)) + 
       theme_minimal() +
       theme(panel.grid.minor = element_blank(),
             panel.grid.major.x = element_blank(),

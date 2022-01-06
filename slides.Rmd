@@ -212,7 +212,7 @@ The dataset `pd` comes from [Richter et al. (2013).](https://econtent.hogrefe.co
 ```{r}
 library(tidyverse)
 library(knitr)
-pd <- read.table("dataset_pd.txt", header = TRUE)[-9]
+pd <- read.table("code-template/dataset_pd.txt", header = TRUE)[-9]
 knitr::kable(head(pd, 3))
 ```
 
@@ -411,17 +411,17 @@ set.seed(42)
 n_class <- 6
 lca_models <- list()
 for (i in seq_len(n_class)) {
-        lca_models[i] <- poLCA::poLCA(formula = my_formula,
-                                      data = pd,
-                                      nclass = i,
-                                      maxiter = 5000,
-                                      nrep = 100)
+  lca_models[[i]] <- poLCA::poLCA(formula = my_formula,
+                                  data = pd,
+                                  nclass = i,
+                                  maxiter = 5000,
+                                  nrep = 100)
 }
 ```
 
 
 ```{r include=FALSE}
-load(file = "lca_models.RData")
+load(file = "code-template/lca_models.RData")
 ```
 
 
@@ -508,7 +508,7 @@ We can create an elbow plot to display the information criteria indices.
 It can be particularly useful to inspect for an “elbow” of point of “diminishing returns” in model fit (e.g., small decreases in the IC for each additional latent class).
 
 ```{r fig.dim=c(10, 5), fig.retina=2}
-source("lca-functions.R")
+source("code-template/lca-functions.R")
 elbow_plot(lca_models = lca_models)
 ```
 
