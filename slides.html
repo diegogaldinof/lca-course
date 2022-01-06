@@ -161,6 +161,21 @@ There are some softwares which can run LCA:
 
 ---
 
+## poLCA
+
+[poLCA](https://cran.r-project.org/web/packages/poLCA/poLCA.pdf) is a package to perform Latent Class Analysis with polytomous variable.
+
+It has a simple, friendly syntax and does almost everything we need by now.
+
+
+```r
+install.packages("poLCA")
+library(poLCA)
+```
+
+
+---
+
 # Steps to perform LCA
 
 Let's dive into a practical example!
@@ -269,12 +284,12 @@ pd %&gt;%
 tbl_summary()
 ```
 
-<div id="issmvlhyar" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="csbknjnrqu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#issmvlhyar .gt_table {
+#csbknjnrqu .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -299,7 +314,7 @@ tbl_summary()
   border-left-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_heading {
+#csbknjnrqu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -311,7 +326,7 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_title {
+#csbknjnrqu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -321,7 +336,7 @@ tbl_summary()
   border-bottom-width: 0;
 }
 
-#issmvlhyar .gt_subtitle {
+#csbknjnrqu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -331,13 +346,13 @@ tbl_summary()
   border-top-width: 0;
 }
 
-#issmvlhyar .gt_bottom_border {
+#csbknjnrqu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_col_headings {
+#csbknjnrqu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -352,7 +367,7 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_col_heading {
+#csbknjnrqu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -372,7 +387,7 @@ tbl_summary()
   overflow-x: hidden;
 }
 
-#issmvlhyar .gt_column_spanner_outer {
+#csbknjnrqu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -384,15 +399,15 @@ tbl_summary()
   padding-right: 4px;
 }
 
-#issmvlhyar .gt_column_spanner_outer:first-child {
+#csbknjnrqu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#issmvlhyar .gt_column_spanner_outer:last-child {
+#csbknjnrqu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#issmvlhyar .gt_column_spanner {
+#csbknjnrqu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -404,7 +419,7 @@ tbl_summary()
   width: 100%;
 }
 
-#issmvlhyar .gt_group_heading {
+#csbknjnrqu .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -426,7 +441,7 @@ tbl_summary()
   vertical-align: middle;
 }
 
-#issmvlhyar .gt_empty_group_heading {
+#csbknjnrqu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -441,15 +456,15 @@ tbl_summary()
   vertical-align: middle;
 }
 
-#issmvlhyar .gt_from_md > :first-child {
+#csbknjnrqu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#issmvlhyar .gt_from_md > :last-child {
+#csbknjnrqu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#issmvlhyar .gt_row {
+#csbknjnrqu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -468,7 +483,7 @@ tbl_summary()
   overflow-x: hidden;
 }
 
-#issmvlhyar .gt_stub {
+#csbknjnrqu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -480,7 +495,7 @@ tbl_summary()
   padding-left: 12px;
 }
 
-#issmvlhyar .gt_summary_row {
+#csbknjnrqu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -490,7 +505,7 @@ tbl_summary()
   padding-right: 5px;
 }
 
-#issmvlhyar .gt_first_summary_row {
+#csbknjnrqu .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -500,7 +515,7 @@ tbl_summary()
   border-top-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_grand_summary_row {
+#csbknjnrqu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -510,7 +525,7 @@ tbl_summary()
   padding-right: 5px;
 }
 
-#issmvlhyar .gt_first_grand_summary_row {
+#csbknjnrqu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -520,11 +535,11 @@ tbl_summary()
   border-top-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_striped {
+#csbknjnrqu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#issmvlhyar .gt_table_body {
+#csbknjnrqu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -533,7 +548,7 @@ tbl_summary()
   border-bottom-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_footnotes {
+#csbknjnrqu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -547,13 +562,13 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_footnote {
+#csbknjnrqu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#issmvlhyar .gt_sourcenotes {
+#csbknjnrqu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -567,41 +582,41 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#issmvlhyar .gt_sourcenote {
+#csbknjnrqu .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#issmvlhyar .gt_left {
+#csbknjnrqu .gt_left {
   text-align: left;
 }
 
-#issmvlhyar .gt_center {
+#csbknjnrqu .gt_center {
   text-align: center;
 }
 
-#issmvlhyar .gt_right {
+#csbknjnrqu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#issmvlhyar .gt_font_normal {
+#csbknjnrqu .gt_font_normal {
   font-weight: normal;
 }
 
-#issmvlhyar .gt_font_bold {
+#csbknjnrqu .gt_font_bold {
   font-weight: bold;
 }
 
-#issmvlhyar .gt_font_italic {
+#csbknjnrqu .gt_font_italic {
   font-style: italic;
 }
 
-#issmvlhyar .gt_super {
+#csbknjnrqu .gt_super {
   font-size: 65%;
 }
 
-#issmvlhyar .gt_footnote_marks {
+#csbknjnrqu .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -663,7 +678,7 @@ barplot(freq, beside = TRUE, legend = c("No", "Yes"),
 main = "Participation in PD activities")
 ```
 
-&lt;img src="slides_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -673,7 +688,12 @@ __Tetrachoric correlation__
 
 Suitable correlation coefficient for binary/dichotomous variables.
 
+&lt;br&gt;
+
 &gt; It makes only sense to apply LPA/LCA if the set of indicators is inter-correlated ([Bauer, 2021.](https://psyarxiv.com/97uab/))
+
+
+---
 
 
 ```r
@@ -683,7 +703,7 @@ corr &lt;- correlation(pd, method = "auto", include_factors = TRUE) %&gt;%
 plot(corr) + theme_minimal() + theme(panel.grid = element_blank())
 ```
 
-&lt;img src="slides_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -699,6 +719,36 @@ plot(corr) + theme_minimal() + theme(panel.grid = element_blank())
 
 ---
 
+### Specifying the model in the poLCA package
+
+We need to select the indicators and create a formula with them:
+
+
+```r
+my_formula &lt;- cbind(CK, PCK, TLM, THS, CMD, ILS, CSP, KKY) ~ 1
+```
+
+The `~ 1` indicates we __don't__ want to estimate a model with covariates.
+
+This formula will be used soon, as an argument in the function `poLCA()`.
+
+---
+
+## Class enumeration
+
+In this step, we need to decide on the number of classes of our model.
+
+The goal is to yield a solution that balances model parsimony and fit, and that delivers substantively interpretable classes.
+
+**The standard procedure**
+
+1. Estimate a one-class model.
+
+2. Estimate models with one additional class at a time.
+
+3. Compare the models based on statistical and substantive criteria.
+
+4. Continue to run models with one additional class until the best model is identified.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

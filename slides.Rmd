@@ -167,6 +167,20 @@ There are some softwares which can run LCA:
 
 ---
 
+## poLCA
+
+[poLCA](https://cran.r-project.org/web/packages/poLCA/poLCA.pdf) is a package to perform Latent Class Analysis with polytomous variable.
+
+It has a simple, friendly syntax and does almost everything we need by now.
+
+```{r eval = FALSE}
+install.packages("poLCA")
+library(poLCA)
+```
+
+
+---
+
 # Steps to perform LCA
 
 Let's dive into a practical example!
@@ -307,3 +321,73 @@ plot(corr) + theme_minimal() + theme(panel.grid = element_blank())
 
 ---
 
+### Specifying the model in the poLCA package
+
+We need to select the indicators and create a formula with them:
+
+```{r}
+my_formula <- cbind(CK, PCK, TLM, THS, CMD, ILS, CSP, KKY) ~ 1
+```
+
+The `~ 1` indicates we __don't__ want to estimate a model with covariates.
+
+This formula will be used soon, as an argument in the function `poLCA()`.
+
+---
+
+## Class enumeration
+
+In this step, we need to decide on the number of classes of our model.
+
+The goal is to yield a solution that balances __model parsimony__ and __fit__, and that delivers substantively __interpretable classes__.
+
+--
+
+**The standard procedure**
+
+1. Estimate a one-class model.
+
+2. Estimate models with one additional class at a time.
+
+3. Compare the models based on statistical and substantive criteria.
+
+4. Continue to run models with one additional class until the best model is identified.
+
+
+
+---
+
+#### \#1
+
+```{r eval = FALSE}
+set.seed(42)
+
+lca1 <- poLCA(formula = my_formula, data = pd, nclass = 1, maxiter = 5000, nrep = 100)
+lca2 <- poLCA(formula = my_formula, data = pd, nclass = 2, maxiter = 5000, nrep = 100)
+lca3 <- poLCA(formula = my_formula, data = pd, nclass = 3, maxiter = 5000, nrep = 100)
+lca4 <- poLCA(formula = my_formula, data = pd, nclass = 4, maxiter = 5000, nrep = 100)
+lca5 <- poLCA(formula = my_formula, data = pd, nclass = 5, maxiter = 5000, nrep = 100)
+lca6 <- poLCA(formula = my_formula, data = pd, nclass = 6, maxiter = 5000, nrep = 100)
+```
+
+---
+
+#### \#2
+
+```{r eval = FALSE}
+set.seed(42)
+n_class <- 6
+lca_models <- list()
+for (i in seq_len(n_class)) {
+        lca_models[i] <- poLCA::poLCA(formula = my_formula,
+                                      data = pd,
+                                      nclass = i,
+                                      maxiter = 5000,
+                                      nrep = 100)
+}
+```
+
+
+### Statistical criteria (fit indices)
+
+sd
