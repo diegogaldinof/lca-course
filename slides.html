@@ -27,13 +27,11 @@
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-# Introduction to Latent Class Analysis
-### Diego Galdino França
-### January 6, 2022
 
----
+background-image: url("img/title.svg")
+background-position: center
+background-size: contain, 50% 50%, cover
 
 
 
@@ -44,7 +42,7 @@ class: center, middle, inverse, title-slide
 
 
 
-
+---
 
 # (Finite) Mixture Models
 
@@ -56,19 +54,35 @@ class: center, middle, inverse, title-slide
 
 ---
 
-IMAGEM DO MODELO
+background-image: url("img/statistical.svg")
+background-position: center
+background-size: contain, 50% 50%, cover
+
+
 
 ---
 
-IMAGEM DO PROBABILISTIC
+background-image: url("img/prob.svg")
+background-position: center
+background-size: contain, 50% 50%, cover
+
+
 
 ---
 
-imagem do LPA
+background-image: url("img/lpa.svg")
+background-position: center
+background-size: contain, 50% 50%, cover
+
+
 
 ---
 
-IMAGEM DO LCA
+background-image: url("img/lca.svg")
+background-position: center
+background-size: contain, 50% 50%, cover
+
+
 
 ---
 
@@ -111,7 +125,7 @@ Determine if class assignments are related as expected to relevant outcomes.
 
 ---
 
-## Cluster analysis *vs* LCA
+## Cluster analysis *vs.* LCA
 
 
 .pull-left[
@@ -276,6 +290,8 @@ As in all the data analysis processes, it's important to start exploring the dat
 
 __Frequency table__
 
+.left-code[
+
 
 ```r
 library(gtsummary)
@@ -284,12 +300,16 @@ pd %&gt;%
 tbl_summary()
 ```
 
-<div id="csbknjnrqu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+]
+
+.right-code[
+
+<div id="nurlkipkij" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#csbknjnrqu .gt_table {
+#nurlkipkij .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -314,7 +334,7 @@ tbl_summary()
   border-left-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_heading {
+#nurlkipkij .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -326,7 +346,7 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_title {
+#nurlkipkij .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -336,7 +356,7 @@ tbl_summary()
   border-bottom-width: 0;
 }
 
-#csbknjnrqu .gt_subtitle {
+#nurlkipkij .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -346,13 +366,13 @@ tbl_summary()
   border-top-width: 0;
 }
 
-#csbknjnrqu .gt_bottom_border {
+#nurlkipkij .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_col_headings {
+#nurlkipkij .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -367,7 +387,7 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_col_heading {
+#nurlkipkij .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -387,7 +407,7 @@ tbl_summary()
   overflow-x: hidden;
 }
 
-#csbknjnrqu .gt_column_spanner_outer {
+#nurlkipkij .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -399,15 +419,15 @@ tbl_summary()
   padding-right: 4px;
 }
 
-#csbknjnrqu .gt_column_spanner_outer:first-child {
+#nurlkipkij .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#csbknjnrqu .gt_column_spanner_outer:last-child {
+#nurlkipkij .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#csbknjnrqu .gt_column_spanner {
+#nurlkipkij .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -419,7 +439,7 @@ tbl_summary()
   width: 100%;
 }
 
-#csbknjnrqu .gt_group_heading {
+#nurlkipkij .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -441,7 +461,7 @@ tbl_summary()
   vertical-align: middle;
 }
 
-#csbknjnrqu .gt_empty_group_heading {
+#nurlkipkij .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -456,15 +476,15 @@ tbl_summary()
   vertical-align: middle;
 }
 
-#csbknjnrqu .gt_from_md > :first-child {
+#nurlkipkij .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#csbknjnrqu .gt_from_md > :last-child {
+#nurlkipkij .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#csbknjnrqu .gt_row {
+#nurlkipkij .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -483,7 +503,7 @@ tbl_summary()
   overflow-x: hidden;
 }
 
-#csbknjnrqu .gt_stub {
+#nurlkipkij .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -495,7 +515,7 @@ tbl_summary()
   padding-left: 12px;
 }
 
-#csbknjnrqu .gt_summary_row {
+#nurlkipkij .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -505,7 +525,7 @@ tbl_summary()
   padding-right: 5px;
 }
 
-#csbknjnrqu .gt_first_summary_row {
+#nurlkipkij .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -515,7 +535,7 @@ tbl_summary()
   border-top-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_grand_summary_row {
+#nurlkipkij .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -525,7 +545,7 @@ tbl_summary()
   padding-right: 5px;
 }
 
-#csbknjnrqu .gt_first_grand_summary_row {
+#nurlkipkij .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -535,11 +555,11 @@ tbl_summary()
   border-top-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_striped {
+#nurlkipkij .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#csbknjnrqu .gt_table_body {
+#nurlkipkij .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -548,7 +568,7 @@ tbl_summary()
   border-bottom-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_footnotes {
+#nurlkipkij .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -562,13 +582,13 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_footnote {
+#nurlkipkij .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#csbknjnrqu .gt_sourcenotes {
+#nurlkipkij .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -582,41 +602,41 @@ tbl_summary()
   border-right-color: #D3D3D3;
 }
 
-#csbknjnrqu .gt_sourcenote {
+#nurlkipkij .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#csbknjnrqu .gt_left {
+#nurlkipkij .gt_left {
   text-align: left;
 }
 
-#csbknjnrqu .gt_center {
+#nurlkipkij .gt_center {
   text-align: center;
 }
 
-#csbknjnrqu .gt_right {
+#nurlkipkij .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#csbknjnrqu .gt_font_normal {
+#nurlkipkij .gt_font_normal {
   font-weight: normal;
 }
 
-#csbknjnrqu .gt_font_bold {
+#nurlkipkij .gt_font_bold {
   font-weight: bold;
 }
 
-#csbknjnrqu .gt_font_italic {
+#nurlkipkij .gt_font_italic {
   font-style: italic;
 }
 
-#csbknjnrqu .gt_super {
+#nurlkipkij .gt_super {
   font-size: 65%;
 }
 
-#csbknjnrqu .gt_footnote_marks {
+#nurlkipkij .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -666,6 +686,7 @@ tbl_summary()
 </table>
 </div>
 
+]
 
 ---
 
@@ -703,7 +724,7 @@ corr &lt;- correlation(pd, method = "auto", include_factors = TRUE) %&gt;%
 plot(corr) + theme_minimal() + theme(panel.grid = element_blank())
 ```
 
-&lt;img src="slides_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_files/figure-html/unnamed-chunk-6-1.png" width="720" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -738,7 +759,9 @@ This formula will be used soon, as an argument in the function `poLCA()`.
 
 In this step, we need to decide on the number of classes of our model.
 
-The goal is to yield a solution that balances model parsimony and fit, and that delivers substantively interpretable classes.
+The goal is to yield a solution that balances __model parsimony__ and __fit__, and that delivers substantively __interpretable classes__.
+
+--
 
 **The standard procedure**
 
@@ -749,6 +772,412 @@ The goal is to yield a solution that balances model parsimony and fit, and that 
 3. Compare the models based on statistical and substantive criteria.
 
 4. Continue to run models with one additional class until the best model is identified.
+
+
+
+---
+
+#### \#1
+
+
+```r
+set.seed(42)
+
+lca1 &lt;- poLCA(formula = my_formula, data = pd, nclass = 1, maxiter = 5000, nrep = 100)
+lca2 &lt;- poLCA(formula = my_formula, data = pd, nclass = 2, maxiter = 5000, nrep = 100)
+lca3 &lt;- poLCA(formula = my_formula, data = pd, nclass = 3, maxiter = 5000, nrep = 100)
+lca4 &lt;- poLCA(formula = my_formula, data = pd, nclass = 4, maxiter = 5000, nrep = 100)
+lca5 &lt;- poLCA(formula = my_formula, data = pd, nclass = 5, maxiter = 5000, nrep = 100)
+lca6 &lt;- poLCA(formula = my_formula, data = pd, nclass = 6, maxiter = 5000, nrep = 100)
+```
+
+---
+
+#### \#2
+
+
+```r
+set.seed(42)
+n_class &lt;- 6
+lca_models &lt;- list()
+for (i in seq_len(n_class)) {
+        lca_models[i] &lt;- poLCA::poLCA(formula = my_formula,
+                                      data = pd,
+                                      nclass = i,
+                                      maxiter = 5000,
+                                      nrep = 100)
+}
+```
+
+
+
+
+
+---
+
+
+
+### Statistical criteria (fit indices)
+
+Statistical criteria should always be evaluated in conjunction with interpretability.
+
+There is no consensus about the __best criteria__ for comparing latent class solutions.
+
+Multiple fit statistics should be used (or at least reported).
+
+---
+
+### Log-likelihood
+
+Maximum value of the log-likelihood. It's used to calculate other fit indices.
+
+
+```r
+llik &lt;- map_dbl(lca_models, function(x) x$llik)
+```
+
+--
+
+### Bayesian Information Criteria (BIC)
+
+The most reliable information criteria to indicate model fit [Nylund et al., 2007.](https://www.tandfonline.com/doi/abs/10.1080/10705510701575396?journalCode=hsem20)
+
+Lower BIC (and other information criteria indices) indicates better fit.
+
+
+```r
+# Computing BIC
+bic &lt;- map_dbl(lca_models, function(x) x$bic)
+```
+
+
+---
+
+### Akaike Information Criteria (AIC)
+
+Not too realiable, but some articles presented it.
+
+
+```r
+aic &lt;- map_dbl(lca_models, function(x) x$aic)
+```
+
+
+--
+
+### Sample-size adjusted BIC (SABIC)
+
+
+```r
+n &lt;- lca_models[[1]]$Nobs
+npar &lt;- map_dbl(lca_models, function(x) x$npar)
+sabic &lt;- (-2 * llik) + npar * log((n + 2) / 24)
+```
+
+
+---
+
+### Consistent Akaike Information Criterion (CAIC)
+
+
+```r
+caic &lt;- (-2 * llik) + npar * (log(n) + 1)
+```
+
+--
+
+### Approximate Weight of Evidence Criterion (AWE)
+
+Very closed to CAIC.
+
+
+```r
+awe &lt;- (-2 * llik) + npar * (log(n) + 1.5)
+```
+
+---
+
+We can create an elbow plot to display the information criteria indices.
+
+It can be particularly useful to inspect for an “elbow” of point of “diminishing returns” in model fit (e.g., small decreases in the IC for each additional latent class).
+
+
+```r
+source("lca-functions.R")
+elbow_plot(lca_models = lca_models)
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-17-1.png" width="720" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+### Bayes Factor
+
+Provides a pairwise comparison of fit between two class models (k *vs.* k + 1).
+
+Represents the ratio of the probability that each model being compared is true.
+
+- 1 &lt; BF &lt; 3 suggests __weak__ support for the model with less classes.
+
+- 3 &lt; BF &lt; 10 suggests __moderate__ support
+
+- BF &gt; 10 suggests __strong__ support.
+
+
+```r
+bf &lt;- c()
+        for (i in 1:length(lca_models)) {
+                if (i + 1 &lt;= length(lca_models)) {
+                        a &lt;- -0.05 * bic[i]
+                        b &lt;- -0.05 * bic[i + 1]
+                        bf[i] &lt;- gtsummary::style_sigfig(exp(a - b), digits = 3)
+                } else {bf[i] &lt;- NA}
+        }
+```
+
+
+
+---
+
+### Likelihood ratio tests
+
+Vuong-Lo-Mendell-Rubin adjusted likelihood ratio test and bootstrapped likelihood ratio test (BLRT). Both are not implemented in R for poLCA objects.
+
+---
+
+## Classification diagnostics
+
+Information about how well the classes are differentiated.
+
+
+--
+
+### Entropy
+
+It indicates how accurately the model defines classes (it's not for selecting the final class solution).
+
+Entropy values should be above, at least, 0.6.
+
+
+```r
+entropy &lt;- function(x) {
+                numerator &lt;- -sum(x$posterior * log(x$posterior), na.rm = TRUE)
+                denominator &lt;- x$N * log(ncol(x$posterior))
+                1 - (numerator / denominator)
+        }
+        ent &lt;- map_dbl(lca_models, entropy)
+```
+
+
+---
+
+
+
+### Gathering all the information in one table
+
+
+```r
+lca_table &lt;- tbl_lca(lca_models)
+lca_table &lt;- set_font_size(lca_table, value = 8); lca_table
+```
+
+<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-20">
+<col><col><col><col><col><col><col><col><col><col><tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">Model</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">Smallest class<br> size (%)</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">LL</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">AIC</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">CAIC</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">BIC</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">SABIC</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">AWE</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">BF</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold; font-size: 8pt;">Entropy</th></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">1 Class</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">100.0</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">-10,688.11</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">21,392.21</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">21,445.32</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">21,437.32</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">21,411.90</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">21,449.32</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.000</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;"></td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">2 Classes</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">37.2</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">-9,600.72</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">19,235.44</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">19,348.29</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">19,331.29</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">19,277.28</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">19,356.79</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.000</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.83</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">3 Classes</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">28.7</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">-9,312.81</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,677.62</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,850.21</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,824.21</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,741.61</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,863.21</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.000</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.78</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">4 Classes</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">19.9</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">-9,158.91</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,387.82</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,620.15</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,585.15</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,473.96</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,637.65</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.438</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.76</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">5 Classes</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">7.18</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">-9,116.28</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,320.57</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,612.65</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,568.65</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,428.86</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,634.65</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">11.6</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.76</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">6 Classes</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">2.31</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">-9,106.39</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,318.78</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,670.61</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,617.61</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,449.22</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">18,697.11</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;"></td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.8pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">0.79</td></tr>
+<tr>
+<td colspan="10" style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.8pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal; font-size: 8pt;">Note: LL = Log-likelihood; AIC = Akaike information criteria; CAIC = Consistent Akaike information criteria; BIC = Bayesian information criteria; SABIC = Sample-size adjusted BIC; AWE = Approximate weight of evidence criterion; BF = Bayes factor.</td></tr>
+</table>
+
+
+Based on the fit indices, let's investigate more the 5-class solution.
+
+---
+
+### Average latent class posterior probability (AvePP)
+
+How well a given model classifies individuals into their most likely class.
+
+This results in a matrix:
+
+- __Diagonal__: e.g., the class 1 average probability for the people who were assigned to the class 1.
+
+- __Off-diagonal__: e.g., the class 2 average probability for the people who were assined to the class 1.
+
+Higher diagonal values (above 0.80; well-separated classes) and closer-to-0 off-diagonal values are desirable.
+
+
+---
+
+
+```r
+tbl_avepp(lca_models, n_class = 5)
+```
+
+<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-21">
+<col><col><col><col><col><col><tr>
+<th style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">Class</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">1</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">2</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">3</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">4</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">5</th></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.78</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.06</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.05</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.05</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.06</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.09</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.75</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.01</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.09</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.06</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">3</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.03</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.84</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.13</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">4</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.04</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.03</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.89</td><td style="vertical-align: top; text-align: center; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.03</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: left; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">5</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.03</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.01</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.06</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.02</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">0.88</td></tr>
+</table>
+
+
+
+---
+
+
+
+## Profile plot (item probability plot)
+
+Given that the person belongs to class k, what is the likelihood of endorsing the item/indicator (for binary variables) or the category of the item (for polytomous variables)?
+
+It gives the idea of who is belonging to each class.
+
+---
+
+
+```r
+my_model &lt;- lca_models[[5]]
+profile_plot(lca_model = my_model)
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-22-1.png" width="864" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+Based on the results, we can labeled the classes and examine the qualitative differences among the classes.
+
+
+```r
+lca_class &lt;- data.frame(class = c("1: High on activities focusing general pedagogical topics",
+                                    "2: High on activities focusing teaching methods",
+                                    "3: High on all activities",
+                                    "4: Low on all activities",
+                                    "5: High on activities focusing (pedagogical) content knowledge and teaching methods"),
+                        size = gtsummary::style_percent(my_model$P, digits = 2))
+```
+
+---
+
+
+```r
+knitr::kable(lca_class, col.names = c("Class", "Class size (%)"))
+```
+
+
+
+|Class                                                                               |Class size (%) |
+|:-----------------------------------------------------------------------------------|:--------------|
+|1: High on activities focusing general pedagogical topics                           |14.30          |
+|2: High on activities focusing teaching methods                                     |7.179          |
+|3: High on all activities                                                           |29.08          |
+|4: Low on all activities                                                            |18.72          |
+|5: High on activities focusing (pedagogical) content knowledge and teaching methods |30.73          |
+
+
+
+---
+
+## Summary: what should you report?
+
+&lt;img src="img/lca-summary-report.jpeg" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+
+## Creating a column with the modal assignment
+
+LCA creates classes based on probabilities.
+
+We can use these classes in subsequent analysis (e.g., regression models, networks).
+
+Let's create a column in our dataset with this classification. The information we need is in `predclass`.
+
+---
+
+
+```r
+pd$lca_class &lt;- my_model$predclass
+head(pd, 5)
+```
+
+<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; ; margin-left: auto; margin-right: auto;  " id="tab:unnamed-chunk-26">
+<col><col><col><col><col><col><col><col><col><tr>
+<th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">CK</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">PCK</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">TLM</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">THS</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">CMD</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">ILS</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">CSP</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">KKY</th><th style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: bold;">lca_class</th></tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.4pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">4</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">3</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; padding: 6pt 6pt 6pt 6pt; font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0pt 0pt;    padding: 6pt 6pt 6pt 6pt; font-weight: normal;">2</td></tr>
+<tr>
+<td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0.4pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">2</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">1</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0pt 0.4pt 0.4pt 0pt;    padding: 6pt 6pt 6pt 6pt; background-color: rgb(242, 242, 242); font-weight: normal;">5</td></tr>
+</table>
+
+
+
+
+---
+
+# References &amp; lectures
+
+There is much more contents about LCA. Here are some references.
+
+Papers:
+
+- [A primer to latent profile and latent class analysis](https://psyarxiv.com/97uab/)
+
+- [Latent Class Analysis: A Guide to Best Practice](https://journals.sagepub.com/doi/full/10.1177/0095798420930932)
+
+- [Ten Frequently Asked Questions about Latent Class Analysis](https://www.statmodel.com/download/LCAFAQ.pdf)
+
+- [Deciding on the Number of Classes in Latent Class Analysis and Growth Mixture Modeling: A Monte Carlo Simulation Study](https://www.tandfonline.com/doi/abs/10.1080/10705510701575396?journalCode=hsem20)
+
+---
+
+# References &amp; lectures
+
+Lectures:
+
+- [Latent Class Analysis | Michael Toland](https://www.youtube.com/watch?v=Z-xmVCC0Y-8&amp;list=PLKEQx6noA4Xqjmvryig2gjYpNWOvvjmiH)
+
+- [Introduction to latent class / profile analysis | CenterStat](https://www.youtube.com/watch?v=NlZFm_EI8OM)
+
+- [Estatística Psicobio II - SEM VII - LCA - Latent Class Analysis | Cientística &amp; Podcast Naruhodo](https://www.youtube.com/watch?v=uLliIgUXpp0) 🇧🇷
+
+
+
+---
+
+background-image: url("img/thanks.svg")
+background-position: center
+background-size: contain, 50% 50%, cover
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

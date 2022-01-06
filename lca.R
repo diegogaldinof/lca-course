@@ -7,11 +7,11 @@ my_formula <- cbind(var_1, var_2, var_3, var_n) ~ 1
 n_class <- 7
 lca_models <- list()
 for (i in seq_len(n_class)) {
-        lca_models[i] <- poLCA::poLCA(my_formula,
-                                      dataset,
-                                      nclass = i,
-                                      maxiter = 5000,
-                                      nrep = 100)
+  lca_models[[i]] <- poLCA::poLCA(my_formula,
+                                  dataset,
+                                  nclass = i,
+                                  maxiter = 5000,
+                                  nrep = 100)
 }
 
 
@@ -194,7 +194,9 @@ profile_plot <- function(lca_model,
                          category_names = NULL,
                          binary = TRUE) {
         
-        if (!require(tidyverse)) {install.packages("tidyverse")}; require(tidyverse)
+  if (!require(tidyverse)) {install.packages("tidyverse")}; require(tidyverse)
+  if (!require(viridis)) {install.packages("tidyverse")}; require(viridis)
+  
         
         probs <- lca_model$probs
         
@@ -212,7 +214,7 @@ profile_plot <- function(lca_model,
                 p_df <- list()
                 for (i in 1:length(probs)) {
                         p_df[[i]] <- data.frame(probs[[i]]) %>%
-                                select(-1) %>%
+                                dplyr::select(-1) %>%
                                 tibble(class = class_names,
                                        var = var_names[i])
                 }
@@ -229,8 +231,7 @@ profile_plot <- function(lca_model,
                                            breaks = seq(0, 1, 0.2),
                                            name = "Conditional item probability") +
                         scale_x_discrete(name = "Indicators") +
-                        scale_color_viridis(name = "", 
-                                            discrete = TRUE,
+                        scale_color_viridis_d(name = "",
                                             option = "D",
                                             end = 0.8) +
                         theme_minimal() +
@@ -276,27 +277,25 @@ profile_plot <- function(lca_model,
                                            expand = c(0, 0.1),
                                            breaks = seq(0, 1, 0.2),
                                            name = "Conditional item probability") +
-                        scale_x_discrete(name = "Indicators") +
-                        scale_fill_viridis(name = "", 
-                                           discrete = TRUE,
-                                           option = "D",
-                                           end = 0.8) +
-                        theme_minimal() +
-                        theme(panel.grid.minor = element_blank(),
-                              panel.grid.major.x = element_blank(),
-                              panel.grid.major.y = element_line(color = c("gray80", rep("grey90", 10)),
-                                                                size = c(0.8, rep(0.4, 10))),
-                              axis.text.x = element_text(size = 10, color = "black", margin = margin(t = -12)),
-                              axis.text.y = element_text(size = 10, color = "black"),
-                              legend.text = element_text(size = 10),
-                              axis.title.x = element_text(size = 10, margin = margin(t = 8, b = 0)),
-                              axis.title.y = element_text(size = 10, margin = margin(r = 8, b = 0)),
-                              axis.ticks.x = element_blank(),
-                              axis.ticks.y = element_blank(),
-                              strip.text = element_text(size = 10, face = "bold", margin = margin(b = 8), color = "black"),
-                              panel.spacing = unit(16, units = "pt"),
-                              legend.position = "bottom", legend.direction = "horizontal",
-                              legend.key.size = unit(10, units = "pt"))
+                  scale_x_discrete(name = "Indicators") +
+                  scale_fill_viridis_d(name = "",
+                                       option = "D") +
+                  theme_minimal() +
+                  theme(panel.grid.minor = element_blank(),
+                        panel.grid.major.x = element_blank(),
+                        panel.grid.major.y = element_line(color = c("gray80", rep("grey90", 10)),
+                                                          size = c(0.8, rep(0.4, 10))),
+                        axis.text.x = element_text(size = 10, color = "black", margin = margin(t = -12)),
+                        axis.text.y = element_text(size = 10, color = "black"),
+                        legend.text = element_text(size = 10),
+                        axis.title.x = element_text(size = 10, margin = margin(t = 8, b = 0)),
+                        axis.title.y = element_text(size = 10, margin = margin(r = 8, b = 0)),
+                        axis.ticks.x = element_blank(),
+                        axis.ticks.y = element_blank(),
+                        strip.text = element_text(size = 10, face = "bold", margin = margin(b = 8), color = "black"),
+                        panel.spacing = unit(16, units = "pt"),
+                        legend.position = "bottom", legend.direction = "horizontal",
+                        legend.key.size = unit(10, units = "pt"))
                 
         }
         
