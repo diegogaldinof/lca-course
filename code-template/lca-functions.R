@@ -125,7 +125,7 @@ elbow_plot <- function(lca_models = NULL) {
   # Plot
   class <- 1:length(lca_models)
   index <- rep(c("AIC", "CAIC", "BIC", "SABIC", "AWE"),
-               length(class))
+               each = length(class))
   
   lca_fval <- c(aic, caic, bic, sabic, awe)
   lca_fit <- data.frame(class, index, lca_fval)

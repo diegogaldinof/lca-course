@@ -305,7 +305,7 @@ profile_plot(lca_model = my_model,
 
 # Creating a column with estimated classes
 
-poLCA creates an object called `predclass` that has the modal assignment classes.
+poLCA created an object called `predclass` that has the modal assignment classes.
 
 You can use this object to create a new column in your data set representing the classes estimated in LCA.
 
